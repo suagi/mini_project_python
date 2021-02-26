@@ -1,5 +1,5 @@
 
-with open('vocabulary.txt', 'w', encoding='UTF-8') as eng_kor:
+with open('vocabulary.txt', 'a', encoding='UTF-8') as eng_kor:
     while True:
         word = input('영어 단어를 입력하세요: ')
         if word =='q':
