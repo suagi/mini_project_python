@@ -4,7 +4,7 @@ with open('vocabulary.txt', 'r', encoding="UTF-8") as test:
     quiz_list = [t for t in test]
     quiz_volume = len(quiz_list)
     while True:
-        index = quiz_list[random.randint(0, quiz_volume)]
+        index = quiz_list[random.randint(0, quiz_volume - 1)]
         answer = index.strip().split(" : ")[0]
         quiz = input("{}: ".format(index.strip().split(" : ")[1]))
         if quiz == "q":
