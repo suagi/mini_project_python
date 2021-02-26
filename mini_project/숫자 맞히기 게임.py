@@ -10,12 +10,12 @@ for i in range(chance):
     if result > num:
         chance -= 1
         print("Up")
-        continue
     elif result < num:
         chance -= 1
         print("Down")
-        continue
     elif result == num:
         print("축하합니다. {}번만에 숫자를 맞히셨습니다.".format(i + 1))
         break
-    print("아쉽습니다. 정답은 {}입니다.".format(result))
+
+    if chance == 0:
+        print("아쉽습니다. 정답은 {}입니다.".format(result))
