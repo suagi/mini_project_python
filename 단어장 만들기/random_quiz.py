@@ -11,6 +11,6 @@ with open('vocabulary.txt', 'r', encoding="UTF-8") as test:
             print("Quiz를 종료합니다.")
             break
         elif quiz == answer:
-            print("맞았습니다.")
+            print("맞았습니다.\n")
         else:
-            print("아쉽습니다 정답은 {}입니다".format(answer))
+            print("아쉽습니다 정답은 {}입니다.\n".format(answer))
