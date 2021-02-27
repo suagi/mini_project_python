@@ -7,6 +7,7 @@ def generate_numbers(n):
         if select not in generate_list:
             generate_list.append(select)
 
+    generate_list.sort()
     return generate_list
 
-print(generate_numbers(6))
+# print(generate_numbers(6))
