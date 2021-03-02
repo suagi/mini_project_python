@@ -25,10 +25,6 @@ def count_matching_numbers(my, com):
 def check(my, com):
     result = count_matching_numbers(my, com[:6])
     bonus = count_matching_numbers(my, com[6:])
-    print(my)
-    print(com[:6])
-    print(com[6:])
-    print(result)
 
     if result == 6:
         return 1000000000
@@ -41,6 +37,4 @@ def check(my, com):
     elif result == 3:
         return 5000
     else:
-        return '꽝'
-
-print(check(generate_numbers(6), draw_winning_numbers()))
+        return 0
