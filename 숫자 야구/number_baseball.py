@@ -7,6 +7,7 @@ def generate_numbers():
         if num not in numbers:
             numbers.append(num)
 
+    print(numbers)
     print("0과 9 사이의 서로 다른 숫자 3개를 랜덤한 순서로 뽑았습니다.\n")
     return numbers
 
@@ -23,7 +24,6 @@ def take_guess():
             print("범위를 벗어나는 숫자입니다. 다시 입력하세요.")
         elif A in new_guess:
             print("중복되는 숫자입니다. 다시 입력하세요.")
-
     return new_guess
 
 def get_score(guess, solution):
@@ -38,15 +38,17 @@ def get_score(guess, solution):
 
     return strike_count, ball_count
 
-# 테스트
-s_1, b_1 = get_score([2, 7, 4], [2, 4, 7])
-print(s_1, b_1)
 
-s_2, b_2 = get_score([7, 2, 4], [2, 4, 7])
-print(s_2, b_2)
+ANSWER = generate_numbers()
+tries = 0
 
-s_3, b_3 = get_score([0, 4, 7], [2, 4, 7])
-print(s_3, b_3)
+while True:
+    S, B = get_score(ANSWER, take_guess())
+    tries += 1
+    if S == 3:
+        print(f"{S}S {B}B")
+        break
+    else:
+        print(f"{S}S {B}B")
 
-s_4, b_4 = get_score([2, 4, 7], [2, 4, 7])
-print(s_4, b_4)
+print("축하합니다. {}번 만에 숫자 3개의 값과 위치를 모두 맞추셨습니다.".format(tries))
