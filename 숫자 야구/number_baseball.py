@@ -33,7 +33,7 @@ def get_score(guess, solution):
     for i in range(3):
         if guess[i] == solution[i]:
             strike_count += 1
-        elif guess[i] in solution and guess[i] != solution[i]:
+        elif guess[i] in solution:
             ball_count += 1
 
     return strike_count, ball_count
